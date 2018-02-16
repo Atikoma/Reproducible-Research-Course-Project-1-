@@ -56,7 +56,7 @@ names(activity_total_steps) <- c("date", "steps")
 hist(activity_total_steps$steps, main = "Total number of steps taken per day", xlab = "Total steps taken per day", col = "red", ylim = c(0,20), breaks = seq(0,25000, by=2500))
 ```
 
-![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-1.png)
+![plot of chunk unnamed-chunk-3](unnamed-chunk-3-1.png)
 
 3.Calculate and report the mean and median of the total number of steps taken per day
 
@@ -86,7 +86,7 @@ names(average_daily_activity) <- c("interval", "mean")
 plot(average_daily_activity$interval, average_daily_activity$mean, type = "l", col="red", lwd = 2, xlab="Interval", ylab="Average number of steps", main="Average number of steps per intervals")
 ```
 
-![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5-1.png)
+![plot of chunk unnamed-chunk-5](unnamed-chunk-5-1.png)
 
 ```r
 average_daily_activity[which.max(average_daily_activity$mean), ]$interval
@@ -142,7 +142,7 @@ names(total_steps_imputed) <- c("date", "daily_steps")
 hist(total_steps_imputed$daily_steps, col = "red", xlab = "Total steps per day", ylim = c(0,30), main = "Total number of steps taken each day", breaks = seq(0,25000,by=2500))
 ```
 
-![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10-1.png)
+![plot of chunk unnamed-chunk-10](unnamed-chunk-10-1.png)
 
 ```r
 mean(total_steps_imputed$daily_steps)
@@ -188,5 +188,5 @@ plot<- ggplot(activity_by_date, aes(x = interval , y = steps, color = datetype))
 print(plot)
 ```
 
-![plot of chunk unnamed-chunk-12](figure/unnamed-chunk-12-1.png)
+![plot of chunk unnamed-chunk-12](unnamed-chunk-12-1.png)
 
